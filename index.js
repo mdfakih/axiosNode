@@ -17,6 +17,10 @@ app.listen(PORT, () => {
     console.log(`Server is running at ${PORT}`)
 })
 
+app, get('/', (req, res) => {
+    res.status(200).json({ message: 'Server running successfully!' })
+})
+
 app.get('/linkrequest', async (req, res) => {
     let editedLink = req.body.link.concat(`${process.env.INFURA_AUTH_KEY}`)
     try {
