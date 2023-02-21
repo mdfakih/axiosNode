@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express()
 
+const PORT = process.env.PORT || 3001
+
 const bodyParser = require("body-parser")
 
 const axios = require("axios")
@@ -11,8 +13,8 @@ dotenv.config()
 
 app.use(bodyParser.json())
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running at https://localhost:${process.env.PORT}`)
+app.listen(PORT, () => {
+    console.log(`Server is running at ${PORT}`)
 })
 
 app.get('/linkrequest', async (req, res) => {
