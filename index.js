@@ -1,8 +1,6 @@
 const express = require("express")
 const app = express()
 
-const PORT = process.env.PORT || 3001
-
 const bodyParser = require("body-parser")
 
 const axios = require("axios")
@@ -10,6 +8,7 @@ const axios = require("axios")
 const dotenv = require("dotenv")
 dotenv.config()
 
+const PORT = process.env.PORT || 3001
 
 app.use(bodyParser.json())
 
